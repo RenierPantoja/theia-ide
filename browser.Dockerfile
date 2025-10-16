@@ -9,10 +9,13 @@ WORKDIR /home/theia
 # Copy repository files
 COPY . .
 
+ENV NODE_OPTIONS="--max_old_space_size=4096"
+
 # Remove unnecesarry files for the browser application
 # Download plugins and build application production mode
 # Use yarn autoclean to remove unnecessary files from package dependencies
-RUN yarn config set network-timeout 600000 -g && \
+RUN set -ex && \
+    yarn config set network-timeout 600000 -g && \
     yarn --pure-lockfile && \
     yarn build:extensions && \
     yarn download:plugins && \
