@@ -7,7 +7,9 @@
 
 <div id="badges" align="center">
 
-The Eclipse Theia IDE is built with this project.\
+The Eclipse Theia IDE is built with this project.
+
+This line was added as a simple change for Git practice.\
 Eclipse Theia IDE also serves as a template for building desktop-based products based on the Eclipse Theia platform.
 
 </div>
